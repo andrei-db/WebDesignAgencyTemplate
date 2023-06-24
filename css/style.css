@@ -15,7 +15,7 @@ header{
 #navbar{
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +42,18 @@ header{
     padding: 10px 20px;
 }
 
+
+.left-tag,.right-tag{
+    font-size: 200px;
+    position: absolute;
+}
+.left-tag{
+    left: -100px;
+}
+.right-tag{
+    right: -100px;
+}
+
 #header-title{
     color:#fff;
     font-size: 120px;
@@ -66,16 +78,8 @@ header h1{
     color: #090909;
 }
 
-.left-tag,.right-tag{
-    font-size: 200px;
-    position: absolute;
-}
-.left-tag{
-    left: -100px;
-}
-.right-tag{
-    right: -100px;
-}
+/* ANIMATIONS */
+
 .slide-from-top {
     position: relative;
     overflow: hidden;
@@ -83,18 +87,18 @@ header h1{
   }
 
   .slide-from-left {
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     animation: slideFromLeft 0.5s ease-out forwards;
   }
   .slide-from-right {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     animation: slideFromRight 0.5s ease-out forwards;
   }
   .slide-from-bottom {
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     animation: slideFromBottom 0.5s ease-out forwards;
   }
   
@@ -158,3 +162,6 @@ header h1{
     
   }
   
+  #about-us{
+    height: 100vh;
+  }
