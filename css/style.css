@@ -1,3 +1,160 @@
 body{
     background-color: #090909;
+    font-family:"Poppins",sans-serif;
+    margin: 0;
+    color: #fff;
 }
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+#navbar{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 30px 0;
+}
+#logo,.right-menu{
+    padding: 0 60px;
+
+    font-size: 25px;
+}
+.right-menu{
+    display: flex;
+}
+.right-menu a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.contact-btn a{
+    background-color: #fff;
+    color: #090909;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+#header-title{
+    color:#fff;
+    font-size: 120px;
+}
+header h1{
+    font-weight: normal;
+    width: 25vw;
+    text-align: center;
+}
+
+.header-btn{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 20px 20px;
+    border-radius: 100px;
+    font-size: 20px;
+}
+
+.header-btn:hover{
+    background-color: #fff;
+    color: #090909;
+}
+
+.left-tag,.right-tag{
+    font-size: 200px;
+    position: absolute;
+}
+.left-tag{
+    left: -100px;
+}
+.right-tag{
+    right: -100px;
+}
+.slide-from-top {
+    position: relative;
+    overflow: hidden;
+    animation: slideFromTop 0.5s ease-out forwards;
+  }
+
+  .slide-from-left {
+    position: fixed;
+    overflow: hidden;
+    animation: slideFromLeft 0.5s ease-out forwards;
+  }
+  .slide-from-right {
+    overflow: hidden;
+    position: fixed;
+    animation: slideFromRight 0.5s ease-out forwards;
+  }
+  .slide-from-bottom {
+    overflow: hidden;
+    position: fixed;
+    animation: slideFromBottom 0.5s ease-out forwards;
+  }
+  
+  .bounce {
+    animation: bounce 1s cubic-bezier(0.25, 0.84, 0.44, 1) infinite;
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* Offscreen position */
+    }
+    100% {
+      opacity: 1; /* Normal position */
+    }
+  }
+  
+  @keyframes slideFromTop {
+    0% {
+      top: -500px; /* Offscreen position */
+    }
+    100% {
+      top: 0; /* Normal position */
+    }
+  }
+  @keyframes slideFromLeft {
+    0% {
+      left: -200px; /* Offscreen position */
+    }
+    100% {
+        left: 200px; /* Normal position */
+    }
+  }
+  @keyframes slideFromRight {
+    0% {
+      right: -200px; /* Offscreen position */
+    }
+    100% {
+        right: 200px; /* Normal position */
+    }
+  }
+  @keyframes slideFromBottom {
+    0% {
+      bottom: -100px; /* Offscreen position */
+    }
+    100% {
+        bottom: 100px; /* Normal position */
+    }
+  }
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    
+  }
+  
