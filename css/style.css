@@ -9,10 +9,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    flex-direction: column;
 }
-#navbar{
+
+#topbar{
     position: absolute;
     top: 0;
     width: 100%;
@@ -20,6 +19,7 @@ header{
     justify-content: space-between;
     align-items: center;
    padding: 30px 0;
+   z-index: 1;
 }
 #logo,.right-menu{
     padding: 0 60px;
@@ -35,33 +35,65 @@ header{
     padding: 0 20px;
 }
 
-.contact-btn a{
-    background-color: #fff;
-    color: #090909;
-    border-radius: 30px;
-    padding: 10px 20px;
-}
 
+#navbar{
+  flex-direction: column;
+  display: none;
+  position: relative;
+  left: 300px;
+  width: 500px;
+  animation: fadeIn 2s ease-in forwards;
+ }
+ #navbar a{
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 40px;
 
-.left-tag,.right-tag{
-    font-size: 200px;
-    position: absolute;
+ }
+
+.perspective{
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
 }
-.left-tag{
-    left: -100px;
+ .container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+  height: 100%;
+  transition: transform .8s ease-in-out;
 }
-.right-tag{
-    right: -100px;
-}
+   .container-rotate{
+    transform: translateZ(-1100px) translateX(650px) rotateY(-30deg);
+    background-color: #090909;
+    width: 80%;
+    overflow: hidden;
+    border: 2px solid grey;
+   }
+
 
 #header-title{
     color:#fff;
     font-size: 120px;
 }
-header h1{
+.container h1{
     font-weight: normal;
     width: 25vw;
     text-align: center;
+}
+
+.left-tag,.right-tag{
+  font-size: 200px;
+  position: absolute;
+}
+.left-tag{
+  left: -100px;
+}
+.right-tag{
+  right: -100px;
 }
 
 .header-btn{
@@ -78,90 +110,94 @@ header h1{
     color: #090909;
 }
 
+
+
+  #about-us{
+    height: 100vh;
+    background-color: red;
+  }
+
+
+
 /* ANIMATIONS */
 
 .slide-from-top {
-    position: relative;
-    overflow: hidden;
-    animation: slideFromTop 0.5s ease-out forwards;
-  }
+  position: relative;
+  overflow: hidden;
+  animation: slideFromTop 0.5s ease-out forwards;
+}
 
-  .slide-from-left {
-    position: absolute;
-    overflow: hidden;
-    animation: slideFromLeft 0.5s ease-out forwards;
-  }
-  .slide-from-right {
-    overflow: hidden;
-    position: absolute;
-    animation: slideFromRight 0.5s ease-out forwards;
-  }
-  .slide-from-bottom {
-    overflow: hidden;
-    position: absolute;
-    animation: slideFromBottom 0.5s ease-out forwards;
-  }
-  
-  .bounce {
-    animation: bounce 1s cubic-bezier(0.25, 0.84, 0.44, 1) infinite;
-  }
-  .fade-in {
+.slide-from-left {
+  position: absolute;
+  overflow: hidden;
+  animation: slideFromLeft 0.5s ease-out forwards;
+}
+.slide-from-right {
+  overflow: hidden;
+  position: absolute;
+  animation: slideFromRight 0.5s ease-out forwards;
+}
+.slide-from-bottom {
+  overflow: hidden;
+  position: absolute;
+  animation: slideFromBottom 0.5s ease-out forwards;
+}
+
+.bounce {
+  animation: bounce 1s cubic-bezier(0.25, 0.84, 0.44, 1) infinite;
+}
+.fade-in {
+  animation: fadeIn 3s ease-in;
+}
+
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
   }
+  100% {
+    opacity: 1; 
+  }
+}
 
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* Offscreen position */
-    }
-    100% {
-      opacity: 1; /* Normal position */
-    }
+@keyframes slideFromTop {
+  0% {
+    top: -500px;
+  }
+  100% {
+    top: 0; 
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    left: -200px;
+  }
+  100% {
+      left: 200px; 
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    right: -200px; 
+  }
+  100% {
+      right: 200px; 
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+      bottom: 100px; 
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
   }
   
-  @keyframes slideFromTop {
-    0% {
-      top: -500px; /* Offscreen position */
-    }
-    100% {
-      top: 0; /* Normal position */
-    }
-  }
-  @keyframes slideFromLeft {
-    0% {
-      left: -200px; /* Offscreen position */
-    }
-    100% {
-        left: 200px; /* Normal position */
-    }
-  }
-  @keyframes slideFromRight {
-    0% {
-      right: -200px; /* Offscreen position */
-    }
-    100% {
-        right: 200px; /* Normal position */
-    }
-  }
-  @keyframes slideFromBottom {
-    0% {
-      bottom: -100px; /* Offscreen position */
-    }
-    100% {
-        bottom: 100px; /* Normal position */
-    }
-  }
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-50px);
-    }
-    
-  }
-  
-  #about-us{
-    height: 100vh;
-  }
+}
