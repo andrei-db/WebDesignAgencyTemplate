@@ -26,19 +26,19 @@ var container = document.querySelector('.container');
 var navbar = document.getElementById('navbar');
 const page = document.querySelector('.page');
 
-menu_btn.addEventListener('click',enableDisableMenu );
+menu_btn.addEventListener('click', enableDisableMenu);
 
-function enableDisableMenu(){
+function enableDisableMenu() {
 
-  if(menu_btn.innerHTML=="Menu"){
-    menu_btn.innerHTML="Close";
+  if (menu_btn.innerHTML == "Menu") {
+    menu_btn.innerHTML = "Close";
     container.classList.toggle('perspective');
     page.classList.toggle('perspective');
     navbar.classList.toggle('show');
 
 
-  }else{
-    menu_btn.innerHTML="Menu";
+  } else {
+    menu_btn.innerHTML = "Menu";
     navbar.classList.remove('show');
     page.classList.remove('perspective');
 
@@ -54,7 +54,7 @@ links.forEach(link => {
 
     if (target) {
       page.scrollTo({
-        top:  target.offsetTop,
+        top: target.offsetTop,
         behavior: 'smooth'
       });
     }
