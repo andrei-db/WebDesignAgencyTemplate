@@ -49,6 +49,7 @@ function enableDisableMenu() {
     
   }
 }
+
 // SMOOTH SCROLL
 const links = document.querySelectorAll('#navbar a[href^="#"]');
 links.forEach(link => {
@@ -65,3 +66,4 @@ links.forEach(link => {
     }
   });
 });
+
