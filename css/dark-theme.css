@@ -212,10 +212,8 @@ section {
 
 }
 .about-us-image img{
-  width: 70%;
-  height: 70%;
-  filter: brightness(40%);
-  border-radius: 20px;
+  width: 65%;
+  height: 80%;
 }
 
 .element{
@@ -299,7 +297,7 @@ section {
   height: 100%;
   background-color: #e91e63;
   z-index: 0;
-  transition: width 0.8s ease;
+  transition: width 0.5s ease;
 }
 .services-cols > div:hover::after{
   width: 100%;
@@ -355,46 +353,207 @@ align-self: center;
   font-size: 30px;
   font-style: italic;
 }
+/* FAQ */
 
+.faq-header{
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+  text-align: center;
+}
+
+.faq-content {
+  margin: 0 auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
+.container-faq{
+  position: absolute;
+  top: 15%;
+}
+#faq{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+/* NEWSLETTER */
+
+#newsletter{
+  height: 400px;
+  background-color: #000;
+
+  display: flex;
+}
+#newsletter .left-container,
+#newsletter .right-container
+{
+  height: 100%;
+  width: 100%;
+}
+#newsletter .right-container form{
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#newsletter .right-container form div h3{
+  font-size: 45px;
+  position: relative;
+  top: -10px;
+  margin: 0;
+}
+#newsletter .right-container form div p{
+  margin: 0 0 20px 0;
+}
+#newsletter .right-container form > div{
+  display: flex;
+  justify-content: center;
+}
+#newsletter .right-container form .mail-icon{
+  font-size: 60px;
+}
+.subscribe-content{
+  width: 40%;
+  position: relative;
+margin-top: 10px;
+}
+#newsletter .right-container form .subscribe-content input{
+  width: 100%;
+  height: 55px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  
+}
+#newsletter .right-container form .subscribe-content input::placeholder{
+  padding-left: 20px;
+}
+#newsletter .right-container form .subscribe-content button{
+position: absolute;
+right: -5px;
+ height: 100%;
+  background-color: #e91e63;
+  
+  padding: 0 35px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+}
+#newsletter .right-container form .subscribe-content button:hover{
+  cursor: pointer;
+}
 /* FOOTER */
+
 #footer{
   position: relative;
   display: flex;
 }
-.left-footer,.right-footer{
+#footer .left-container,.right-container{
   height: 92%;
   width: 50%;
 }
-.left-footer{
+#footer .left-container{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
 }
-.left-footer .row{
+#footer .left-container .row{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
-.left-footer .row >div{
+#footer .left-container .row .col{
   width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.left-footer .row >div h4{
+#footer .left-container .row .col h4{
   font-size: 26px;
   position: relative;
+  padding-bottom: 5px;
 }
-.left-footer .row >div h4::before{
+#footer .left-container .row .col h4::before{
   content: "";
   background-color: #e91e63;
-  height: 2px;
+  border-radius: 20px;
+  height: 1px;
   width: 100%;
   position: absolute;
   bottom: 0;
+  
 }
-.left-footer .row >div>a{
+#footer .left-container .row .col a{
 
   text-decoration: none;
   color: #E1E1E1;
@@ -403,38 +562,40 @@ align-self: center;
 transition: padding 0.3s ease;
 }
 
-.left-footer .row >div>a:hover{
+#footer .left-container .row .col a:hover{
   padding-left: 30px;
 }
-.social{
+#footer .left-container .row .col .social-media{
   flex-direction: row;
   justify-content: space-between;
 }
-.social a{
+#footer .left-container .row .col .social-media a{
   text-decoration: none;
   color: #E1E1E1;
   font-size: 30px;
   transition: color 0.2s ease-in-out;
   margin-right: 15px;
 }
-.social a:hover{
+#footer .left-container .row .col .social-media a:hover{
   color: #e91e63;
 }
-.right-footer{
+
+
+#footer .right-container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.right-footer form{
+#footer .right-container form{
   height: 80%;
   width: 80%;
   background-color: #333;
   
 }
-.right-footer form h2{
+#footer .right-container form h2{
   text-align: center;
 }
-.right-footer form > div{
+#footer .right-container form > div{
   
   width: 80%;
   margin: 40px auto;
@@ -442,21 +603,23 @@ transition: padding 0.3s ease;
   justify-content: space-between;
   align-items: center;
 }
-::placeholder{
+#footer .right-container form > div>div input::placeholder{
   color: #E1E1E1;
 }
-.right-footer form textarea::placeholder{
+#footer .right-container form .message-text textarea::placeholder{
  padding: 10px 0 0 10px;
 }
-.right-footer form input{
+
+#footer .right-container form input{
   position: relative;
   height: 50px;
   width: 100%;
   font-size: 20px;
   background-color: transparent;
   border: none;
- 
+ outline: none;
 }
+
 .first-name,.last-name,.email,.phone{
   position: relative;
   margin: 0 10px;
@@ -464,28 +627,30 @@ transition: padding 0.3s ease;
 .first-name::before,.last-name::before,
 .email::before,.phone::before{
   content: "";
-  background-color: #e91e63 !important;
+  background-color:#E1E1E1;
   height: 2px;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
+.first-name:focus::placeholder{
+  padding-bottom: 20px;
+}
 
-.right-footer form textarea{
+#footer .right-container form textarea{
   background-color: transparent;
   height: 220px;
   width: 100%;
   resize: none;
   font-size: 20px;
+  outline: none;
 }
-.right-footer form > div button{
+#footer .right-container form > div button{
   padding: 18px 37px;
   background-color: #e91e63;
   color: #E1E1E1;
   border: none;
 }
-
-
 
 
 #footer .copyright{

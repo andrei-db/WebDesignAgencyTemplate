@@ -66,4 +66,28 @@ links.forEach(link => {
     }
   });
 });
+const linksFooter = document.querySelectorAll('.useful-links a');
+linksFooter.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
 
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (target) {
+      page.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+
+const questions = document.querySelectorAll('.question');
+const answers = document.querySelectorAll('.answer');
+for(let i=0;i<questions.length;i++){
+    questions[i].addEventListener('click',function(){
+
+      answers[i].classList.toggle('show-answer');
+    });
+}
