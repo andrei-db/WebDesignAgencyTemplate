@@ -147,11 +147,7 @@ section {
   color: #090909;
 }
 
-
-
-
-
-
+/* ABOUT US */
 
 #about-us {
  
@@ -162,46 +158,48 @@ section {
   color: #E1E1E1;
   font-family: Montserrat, sans-serif !important;
 }
-#about-us h2{
- 
- 
-  font-size: 48px;
-}
-#about-us > div {
+
+#about-us .row {
   width: 90%;
   height: 50%;
   display: flex;
 }
-.about-us-text,.about-us-image{
+#about-us .row .about-us-image,
+#about-us .row .about-us-text{
   height: 100%;
 
 }
-.about-us-text{
- margin-left: 130px;
- width: 55%;
-}
-.about-us-text p,.about-us-text span{
-  width: 80%;
-  line-height: 2;
-}
-.about-us-text p{
-  
-  font-size: 17px;
-}
-.about-us-text span{
-  font-weight: 700;
-}
-.about-us-image{
+#about-us .row .about-us-image{
   width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.about-us-image img{
+#about-us .row .about-us-image img{
   width: 65%;
   height: 80%;
 }
+#about-us .row .about-us-text{
+ margin-left: 130px;
+ width: 55%;
+}
+#about-us .row .about-us-text h2{
+  font-size: 48px;
+}
+#about-us .row .about-us-text p,
+#about-us .row .about-us-text span{
+  width: 80%;
+  line-height: 2;
+}
+#about-us .row .about-us-text p{
+  
+  font-size: 17px;
+}
+#about-us .row .about-us-text span{
+  font-weight: 700;
+}
+
 
 .element{
   width: 33.333%;

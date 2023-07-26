@@ -49,22 +49,17 @@ links.forEach(link => {
   });
 });
 
+// HOME - bounce animation
 
-var headerTitleDiv = document.getElementById("header-title");
-
+var headerTitleDiv = document.getElementById("home-title");
 window.addEventListener("DOMContentLoaded", function () {
   headerTitleDiv.addEventListener("animationend", activateBounceAnimation);
 });
-
-
-
 function activateBounceAnimation() {
   headerTitleDiv.classList.add("bounce");
 }
 
 
-
-const body = document.querySelector('body');
 
 const linksFooter = document.querySelectorAll('.useful-links a');
 linksFooter.forEach(link => {
