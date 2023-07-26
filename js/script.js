@@ -51,7 +51,7 @@ links.forEach(link => {
 
 // HOME - bounce animation
 
-var headerTitleDiv = document.getElementById("home-title");
+var headerTitleDiv = document.querySelector(".home-title");
 window.addEventListener("DOMContentLoaded", function () {
   headerTitleDiv.addEventListener("animationend", activateBounceAnimation);
 });

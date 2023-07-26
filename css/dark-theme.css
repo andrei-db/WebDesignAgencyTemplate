@@ -97,6 +97,7 @@ section {
   height: 100vh;
 }
 
+/* HOME */
 #home {
 
   display: flex;
@@ -200,45 +201,12 @@ section {
   font-weight: 700;
 }
 
-
-.element{
-  width: 33.333%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.projects-number{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  font-size: 55px;
-  background-color: #E1E1E1;
-  color: #121212;
-  font-weight: 600;
-}
-.element p{
-  width: 60%;
-  line-height: 2;
-  text-align: center;
-}
-/* OUR MISSION */
-
-#our-mission {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* SERVICES */
-#services a {
-  text-decoration: none;
-  color: #fff;
+#services{
+  display: flex;
+  justify-content: center;
 }
-#services .container {
+#services .services-container {
   width: 70%;
   margin: auto;
   display: flex;
@@ -246,23 +214,23 @@ section {
   flex-direction: column;
   align-items: center;
 }
-#services .container h2{
+#services .services-container h2{
   text-align: center;
   font-size: 25px;
 }
-#services .container > p{
+#services .services-container > p{
   width: 60%;
   text-align: center;
   margin-bottom: 55px;
   font-size: 20px;
 }
-.services-cols{
+#services .services-container .services-cols{
   
   width: 100%;
   display: flex;
  
 }
-.services-cols > div{
+#services .services-container .services-cols > div{
   margin: 0 20px;
   width: 30%;
   background-color: #333;
@@ -273,7 +241,7 @@ section {
   position: relative;
   
 }
-.services-cols > div::after{
+#services .services-container .services-cols > div::after{
   content: "";
   position: absolute;
   top: 0;
@@ -284,12 +252,12 @@ section {
   z-index: 0;
   transition: width 0.5s ease;
 }
-.services-cols > div:hover::after{
+#services .services-container .services-cols > div:hover::after{
   width: 100%;
   background-color: #e91e63;
 
 }
-.services-cols > div>h3{
+#services .services-container .services-cols > div>h3{
   z-index: 11;
   color: #fff;
   font-size: 30px;
@@ -299,17 +267,19 @@ section {
   align-self: center;
   z-index: 1;
 }
-.services-cols > div>p{
+#services .services-container .services-cols > div>p{
   font-size: 18px;
   line-height: 2;
   z-index: 1;
 }
-.services-cols > div>a{
+#services .services-container .services-cols > div>a{
   font-size: 22px;
   margin-top: 30px;
   z-index: 1;
+  text-decoration: none;
+  color: #fff;
 }
-.service-image{
+#services .services-container .services-cols > div> .service-image{
 align-self: center;
  font-size: 60px;
  z-index: 1;
