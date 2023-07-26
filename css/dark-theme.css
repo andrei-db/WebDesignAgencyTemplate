@@ -6,7 +6,7 @@ body {
   color: #E1E1E1;
 }
 
-
+/* TOPBAR */
 
 #topbar {
   position: fixed;
@@ -38,9 +38,29 @@ body {
   cursor: pointer;
 }
 
+/* NAVBAR */
 
+#navbar {
+  flex-direction: column;
+  display: none;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
+  z-index: 10;
+  animation: fadeIn 2s ease-in forwards;
+}
 
+#navbar a {
+  text-decoration: none;
+  color: #E1E1E1;
+  padding: 20px 0;
+  font-size: 40px;
+}
 
+#navbar.show {
+  display: flex;
+}
 
 #header {
 
@@ -97,29 +117,6 @@ section {
   color: #090909;
 }
 
-#navbar {
-  flex-direction: column;
-  display: none;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15%;
- 
-  animation: fadeIn 2s ease-in forwards;
-  z-index: 10;
-}
-
-#navbar a {
-  text-decoration: none;
-  color: #E1E1E1;
-  padding: 20px 0;
-  font-size: 40px;
-  
-}
-
-#navbar.show {
-  display: flex;
-}
 
 .container {
 

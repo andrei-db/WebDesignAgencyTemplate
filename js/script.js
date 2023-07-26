@@ -18,6 +18,7 @@ function enableDisableMenu() {
     page.classList.remove('perspective');
   }
 }
+
 // TOPBAR - change theme
 var change_btn = document.getElementById('change-theme');
 var css_file = document.getElementById('css-file');
@@ -31,6 +32,22 @@ change_btn.addEventListener('click', () => {
   }
 });
 
+// NAVBAR - smooth scroll
+const links = document.querySelectorAll('#navbar a[href^="#"]');
+links.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (target) {
+      page.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 
 
 var headerTitleDiv = document.getElementById("header-title");
@@ -48,22 +65,7 @@ function activateBounceAnimation() {
 
 
 const body = document.querySelector('body');
-// SMOOTH SCROLL
-const links = document.querySelectorAll('#navbar a[href^="#"]');
-links.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
 
-    const target = document.querySelector(link.getAttribute('href'));
-
-    if (target) {
-      page.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
 const linksFooter = document.querySelectorAll('.useful-links a');
 linksFooter.forEach(link => {
   link.addEventListener('click', (event) => {
