@@ -397,13 +397,12 @@ div.panel.show {
 
   display: flex;
 }
-#newsletter .left-container,
-#newsletter .right-container
+#newsletter .newsletter-container
 {
   height: 100%;
   width: 100%;
 }
-#newsletter .right-container form{
+#newsletter .newsletter-container form{
   position: relative;
   top: -20px;
   width: 100%;
@@ -413,28 +412,28 @@ div.panel.show {
   align-items: center;
   justify-content: center;
 }
-#newsletter .right-container form div h3{
+#newsletter .newsletter-container form div h3{
   font-size: 45px;
   position: relative;
   top: -10px;
   margin: 0;
 }
-#newsletter .right-container form div p{
+#newsletter .newsletter-container form div p{
   margin: 0 0 20px 0;
 }
-#newsletter .right-container form > div{
+#newsletter .newsletter-container form > div{
   display: flex;
   justify-content: center;
 }
-#newsletter .right-container form .mail-icon{
+#newsletter .newsletter-container form .mail-icon{
   font-size: 60px;
 }
-.subscribe-content{
+#newsletter .newsletter-container form .subscribe-content{
   width: 40%;
   position: relative;
 margin-top: 10px;
 }
-#newsletter .right-container form .subscribe-content input{
+#newsletter .newsletter-container form .subscribe-content input{
   width: 100%;
   height: 55px;
   border-radius: 2px;
@@ -443,10 +442,10 @@ margin-top: 10px;
   border-radius: 30px;
   
 }
-#newsletter .right-container form .subscribe-content input::placeholder{
+#newsletter .newsletter-container form .subscribe-content input::placeholder{
   padding-left: 20px;
 }
-#newsletter .right-container form .subscribe-content button{
+#newsletter .newsletter-container form .subscribe-content button{
 position: absolute;
 right: -5px;
  height: 100%;
@@ -457,7 +456,7 @@ right: -5px;
   border-radius: 30px;
   color: #fff;
 }
-#newsletter .right-container form .subscribe-content button:hover{
+#newsletter .newsletter-container form .subscribe-content button:hover{
   cursor: pointer;
 }
 /* FOOTER */

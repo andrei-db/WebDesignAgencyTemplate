@@ -145,7 +145,7 @@ function choose2() {
 
 }
 
-
+// FOOTER - navigation
 const linksFooter = document.querySelectorAll('.useful-links a');
 linksFooter.forEach(link => {
   link.addEventListener('click', (event) => {
