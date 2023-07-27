@@ -109,7 +109,7 @@ section {
 
 #home .home-title {
   color: #E1E1E1;
-  font-size: 120px;
+  font-size: 100px;
 }
 
 #home h1 {
@@ -120,17 +120,11 @@ section {
 
 #home .left-tag,
 #home .right-tag {
-  font-size: 200px;
+  font-size: 150px;
   position: absolute;
 }
 
-#home .left-tag {
-  left: -100px;
-}
 
-#home .right-tag {
-  right: -100px;
-}
 
 #home .quote-btn {
   text-decoration: none;
@@ -151,56 +145,234 @@ section {
 /* ABOUT US */
 
 #about-us {
- 
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: space-evenly;
   color: #E1E1E1;
   font-family: Montserrat, sans-serif !important;
 }
-
-#about-us .row {
-  width: 90%;
-  height: 50%;
+.about-container{
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#about-us .row .about-us-image,
-#about-us .row .about-us-text{
-  height: 100%;
-
-}
-#about-us .row .about-us-image{
-  width: 45%;
+#about-us .about-us-image{
+  width: 500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-#about-us .row .about-us-image img{
-  width: 65%;
-  height: 80%;
+#about-us .about-us-image img{
+  width: 100%;
+  height: 100%;
 }
-#about-us .row .about-us-text{
- margin-left: 130px;
- width: 55%;
+#about-us .about-us-text{
+ width: 40%;
 }
-#about-us .row .about-us-text h2{
-  font-size: 48px;
+#about-us .about-us-text h2{
+  font-size: 70px;
+  margin:0 0 15px 0;
 }
-#about-us .row .about-us-text p,
-#about-us .row .about-us-text span{
-  width: 80%;
+#about-us .about-us-text p,
+#about-us .about-us-text span{
+  width: 100%;
   line-height: 2;
-}
-#about-us .row .about-us-text p{
-  
-  font-size: 17px;
-}
-#about-us .row .about-us-text span{
-  font-weight: 700;
+  font-size: 23px;
 }
 
+#about-us .about-us-text span{
+  display: block;
+  font-weight: 700;
+}
+#about-us .qualities{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#about-us .qualities h2{
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+/* OUR MISSION */
+#our-mission {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #E1E1E1;
+  font-family: Montserrat, sans-serif !important;
+}
+.our-mission-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#our-mission .our-mission-image{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#our-mission .our-mission-image img{
+  width: 100%;
+  height: 100%;
+}
+#our-mission .our-mission-text{
+ width: 40%;
+}
+#our-mission .our-mission-text h2{
+  font-size: 70px;
+  margin:0 0 15px 0;
+}
+#our-mission .our-mission-text p,
+#our-mission .our-mission-text span{
+  width: 100%;
+  line-height: 2;
+  font-size: 23px;
+}
+#our-mission .our-mission-text span{
+  display: block;
+  font-weight: 700;
+}
+#our-mission .qualities{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#our-mission .qualities h2{
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 500;
+}
+/* 2K resolution */
+@media screen and (min-width: 1940px){
+  #about-us .about-us-image{
+    width: 600px;
+    height: 600px;
+  }
+  #about-us .about-us-text h2{
+    font-size: 85px;
+  }
+  #about-us .about-us-text p,
+  #about-us .about-us-text span{
+    font-size: 30px;
+  }
+  #about-us .qualities h2{
+    font-size: 85px;
+  } 
+  #our-mission .our-mission-image{
+    width: 600px;
+    height: 600px;
+  }
+  #our-mission .our-mission-text h2{
+    font-size: 85px;
+  }
+  #our-mission .our-mission-text p,
+  #our-mission .our-mission-text span{
+    font-size: 30px;
+  }
+  #our-mission .qualities h2{
+    font-size: 85px;
+  }
+}
+@media screen and (max-width: 1308px){
+  #home .home-title {
+    font-size: 80px;
+  }
+ 
+  #about-us .about-us-text h2{
+    font-size: 55px;
+  }
+  #about-us .about-us-text p,
+  #about-us .about-us-text span{
+    font-size: 19px;
+  }
+  #about-us .qualities h2{
+    font-size: 55px;
+  }
+
+  #our-mission .our-mission-text h2{
+    font-size: 55px;
+  }
+  #our-mission .our-mission-text p,
+  #our-mission .our-mission-text span{
+    font-size: 19px;
+  }
+  #our-mission .qualities h2{
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 968px){
+  #about-us{
+    height: auto;
+  }
+  #about-us .about-us-image{
+    width: 400px;
+    height: 400px;
+  }
+  #about-us .about-container{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-us .about-us-text{
+    width: 75%;
+   margin-top: 75px;
+  }
+  #about-us .qualities{
+    margin: 75px 0;
+  }
+
+  #our-mission{
+    height: auto;
+  }
+  #our-mission .our-mission-image{
+    width: 400px;
+    height: 400px;
+    margin-top: 75px;
+  }
+  #our-mission .our-mission-container{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #our-mission .our-mission-text{
+    width: 75%;
+   
+  }
+  #our-mission .qualities{
+    margin: 75px 0;
+  }
+}
+@media screen and (max-width: 600px){
+  #about-us .about-us-image{
+    width: 330px;
+    height: 330px;
+  }
+  #about-us .qualities{
+    flex-direction: column;
+  }
+  #about-us .qualities h2{
+    margin: 10px 0;
+  }
+  #our-mission .our-mission-image{
+    width: 330px;
+    height: 330px;
+  }
+  #our-mission .qualities{
+    flex-direction: column;
+  }
+  #our-mission .qualities h2{
+    margin: 10px 0;
+  }
+}
 /* SERVICES */
 #services{
   display: flex;
@@ -645,7 +817,7 @@ transition: padding 0.3s ease;
 }
 
 .fade-in {
-  animation: fadeIn 3s ease-in;
+  animation: fadeIn 1.5s ease-in;
 }
 
 
@@ -675,7 +847,7 @@ transition: padding 0.3s ease;
   }
 
   100% {
-    left: 200px;
+    left: 130px;
   }
 }
 
@@ -685,7 +857,7 @@ transition: padding 0.3s ease;
   }
 
   100% {
-    right: 200px;
+    right: 130px;
   }
 }
 
