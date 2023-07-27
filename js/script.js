@@ -85,26 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   
   });
-
-
-const linksFooter = document.querySelectorAll('.useful-links a');
-linksFooter.forEach(link => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const target = document.querySelector(link.getAttribute('href'));
-
-    if (target) {
-      page.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
-
-
+// PROJECTS
 
 var leftProject = document.querySelector('.left-button');
 var rightProject = document.querySelector('.right-button');
@@ -164,3 +145,19 @@ function choose2() {
 
 }
 
+
+const linksFooter = document.querySelectorAll('.useful-links a');
+linksFooter.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (target) {
+      page.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
