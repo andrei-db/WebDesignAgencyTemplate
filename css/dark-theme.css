@@ -37,6 +37,9 @@ body {
 #topbar .right-menu span:hover {
   cursor: pointer;
 }
+.mobile-menu{
+  display: none;
+}
 
 /* NAVBAR */
 
@@ -54,7 +57,7 @@ body {
 #navbar a {
   text-decoration: none;
   color: #E1E1E1;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 40px;
 }
 
@@ -250,136 +253,14 @@ section {
   font-style: italic;
   font-weight: 500;
 }
-/* 2K resolution */
-@media screen and (min-width: 1940px){
-  #about-us .about-us-image{
-    width: 600px;
-    height: 600px;
-  }
-  #about-us .about-us-text h2{
-    font-size: 85px;
-  }
-  #about-us .about-us-text p,
-  #about-us .about-us-text span{
-    font-size: 30px;
-  }
-  #about-us .qualities h2{
-    font-size: 85px;
-  } 
-  #our-mission .our-mission-image{
-    width: 600px;
-    height: 600px;
-  }
-  #our-mission .our-mission-text h2{
-    font-size: 85px;
-  }
-  #our-mission .our-mission-text p,
-  #our-mission .our-mission-text span{
-    font-size: 30px;
-  }
-  #our-mission .qualities h2{
-    font-size: 85px;
-  }
-}
-@media screen and (max-width: 1308px){
-  #home .home-title {
-    font-size: 80px;
-  }
- 
-  #about-us .about-us-text h2{
-    font-size: 55px;
-  }
-  #about-us .about-us-text p,
-  #about-us .about-us-text span{
-    font-size: 19px;
-  }
-  #about-us .qualities h2{
-    font-size: 55px;
-  }
 
-  #our-mission .our-mission-text h2{
-    font-size: 55px;
-  }
-  #our-mission .our-mission-text p,
-  #our-mission .our-mission-text span{
-    font-size: 19px;
-  }
-  #our-mission .qualities h2{
-    font-size: 55px;
-  }
-}
-
-@media screen and (max-width: 968px){
-  #about-us{
-    height: auto;
-  }
-  #about-us .about-us-image{
-    width: 400px;
-    height: 400px;
-  }
-  #about-us .about-container{
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #about-us .about-us-text{
-    width: 75%;
-   margin-top: 75px;
-  }
-  #about-us .qualities{
-    margin: 75px 0;
-  }
-
-  #our-mission{
-    height: auto;
-  }
-  #our-mission .our-mission-image{
-    width: 400px;
-    height: 400px;
-    margin-top: 75px;
-  }
-  #our-mission .our-mission-container{
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  #our-mission .our-mission-text{
-    width: 75%;
-   
-  }
-  #our-mission .qualities{
-    margin: 75px 0;
-  }
-}
-@media screen and (max-width: 600px){
-  #about-us .about-us-image{
-    width: 330px;
-    height: 330px;
-  }
-  #about-us .qualities{
-    flex-direction: column;
-  }
-  #about-us .qualities h2{
-    margin: 10px 0;
-  }
-  #our-mission .our-mission-image{
-    width: 330px;
-    height: 330px;
-  }
-  #our-mission .qualities{
-    flex-direction: column;
-  }
-  #our-mission .qualities h2{
-    margin: 10px 0;
-  }
-}
 /* SERVICES */
 #services{
   display: flex;
   justify-content: center;
 }
 #services .services-container {
-  width: 70%;
+  width: 85%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -388,30 +269,34 @@ section {
 }
 #services .services-container h2{
   text-align: center;
-  font-size: 25px;
+  font-size: 40px;
+  margin: 0;
 }
 #services .services-container > p{
   width: 60%;
   text-align: center;
   margin-bottom: 55px;
-  font-size: 20px;
+  font-size: 21px;
 }
 #services .services-container .services-cols{
   
   width: 100%;
   display: flex;
- 
+  justify-content: space-evenly;
+ flex-wrap: nowrap;
 }
 #services .services-container .services-cols > div{
+  box-sizing: border-box;
   margin: 0 20px;
-  width: 30%;
+  flex-basis: 25%;
   background-color: #333;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 20px 40px;
   position: relative;
-  
+  height: 550px;
+  overflow: hidden;
 }
 #services .services-container .services-cols > div::after{
   content: "";
@@ -528,6 +413,7 @@ div.panel.show {
   perspective: 1000px;
   position: relative;
 }
+
 #our-projects .left-button{
   position: absolute;
   left: 80px;
@@ -551,15 +437,51 @@ div.panel.show {
   width: 20%;
   background-color: transparent;
   position: relative;
-    
+  transition: all 1s ease;
   transform-style: preserve-3d;
 }
 #our-projects .projects-container .item{
   height: 100%;
   width: 100%;
   position: absolute;
-  transition: transform 1.5s ease;
+  transition: all 1s ease;
   background-color: #333;
+  border: 2px solid #777;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+}
+#our-projects .projects-container .item img{
+  width: 100%;
+  height: 100%;
+}
+.see-project{
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.see-project:hover{
+  cursor: pointer;
+}
+.see-project span{
+  position: relative;
+  z-index: 100;
+}
+.see-project::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: grey;
+  opacity: 0.3;
 }
 /* NEWSLETTER */
 
@@ -636,6 +558,8 @@ right: -5px;
 #footer{
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #footer .left-container,.right-container{
   height: 92%;
@@ -759,7 +683,7 @@ transition: padding 0.3s ease;
 
 #footer .right-container form textarea{
   background-color: transparent;
-  height: 220px;
+  height: 200px;
   width: 100%;
   resize: none;
   font-size: 20px;
@@ -786,6 +710,212 @@ transition: padding 0.3s ease;
 #footer .copyright > span{
   margin: 0 30px;
 }
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 600px;
+  width: 1300px;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+
+}
+.modal .close-btn{
+  position: absolute;
+  bottom: 10px;
+}
+.modal .close-btn:hover{
+  cursor: pointer;
+}
+.modal img{
+  border-radius: 30px;
+width: 100%;
+height:100%;
+}
+
+
+.mobile-menu{
+  transform: translateX(-50%) translateY(-50%) !important;
+  left:50% !important;
+}
+/* 2K resolution */
+@media screen and (min-width: 1940px){
+  #about-us .about-us-image{
+    width: 600px;
+    height: 600px;
+  }
+  #about-us .about-us-text h2{
+    font-size: 85px;
+  }
+  #about-us .about-us-text p,
+  #about-us .about-us-text span{
+    font-size: 30px;
+  }
+  #about-us .qualities h2{
+    font-size: 85px;
+  } 
+  #our-mission .our-mission-image{
+    width: 600px;
+    height: 600px;
+  }
+  #our-mission .our-mission-text h2{
+    font-size: 85px;
+  }
+  #our-mission .our-mission-text p,
+  #our-mission .our-mission-text span{
+    font-size: 30px;
+  }
+  #our-mission .qualities h2{
+    font-size: 85px;
+  }
+  #services .services-container .services-cols > div{
+    height: 650px;
+  }
+}
+@media screen and (max-width: 1308px){
+  #home .home-title {
+    font-size: 80px;
+  }
+ 
+  #about-us .about-us-text h2{
+    font-size: 55px;
+  }
+  #about-us .about-us-text p,
+  #about-us .about-us-text span{
+    font-size: 19px;
+  }
+  #about-us .qualities h2{
+    font-size: 55px;
+  }
+
+  #our-mission .our-mission-text h2{
+    font-size: 55px;
+  }
+  #our-mission .our-mission-text p,
+  #our-mission .our-mission-text span{
+    font-size: 19px;
+  }
+  #our-mission .qualities h2{
+    font-size: 55px;
+  }
+  #services{
+    height: auto;
+  }
+  #services .services-container .services-cols{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #services .services-container .services-cols >div{
+    margin-top: 40px;
+    flex-basis:40%;
+  }
+  #footer{
+    height: auto;
+    flex-direction: column;
+  }
+  #footer .left-container,.right-container{
+    margin: 60px;
+    width: 100%;
+  }
+  #footer .copyright{
+    position: relative;
+    height: 100px
+  }
+}
+
+@media screen and (max-width: 968px){
+  #topbar .logo, #topbar .right-menu {
+    margin: 0 40px;
+  }
+ 
+  #navbar {
+    left:75px;
+  }
+  #navbar a {
+    
+    font-size: 30px;
+  }
+  #about-us{
+    height: auto;
+  }
+  #about-us .about-us-image{
+    width: 400px;
+    height: 400px;
+  }
+  #about-us .about-container{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-us .about-us-text{
+    width: 75%;
+   margin-top: 75px;
+  }
+  #about-us .qualities{
+    margin: 75px 0;
+  }
+
+  #our-mission{
+    height: auto;
+  }
+  #our-mission .our-mission-image{
+    width: 400px;
+    height: 400px;
+    margin-top: 75px;
+  }
+  #our-mission .our-mission-container{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  #our-mission .our-mission-text{
+    width: 75%;
+   
+  }
+  #our-mission .qualities{
+    margin: 75px 0;
+  }
+
+  #services .services-container .services-cols >div{
+    flex-basis:70%;
+  }
+}
+@media screen and (max-width: 768px){
+
+  #topbar .right-menu :nth-child(2){
+    display: none;
+  }
+  #about-us .about-us-image{
+    width: 330px;
+    height: 330px;
+  }
+  #about-us .qualities{
+    flex-direction: column;
+  }
+  #about-us .qualities h2{
+    margin: 10px 0;
+  }
+  #our-mission .our-mission-image{
+    width: 330px;
+    height: 330px;
+  }
+  #our-mission .qualities{
+    flex-direction: column;
+  }
+  #our-mission .qualities h2{
+    margin: 10px 0;
+  }
+  #services .services-container .services-cols >div{
+    flex-basis:100%;
+  }
+  #footer .left-container .row{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* ANIMATIONS */
 
 .slide-from-top {
@@ -820,7 +950,9 @@ transition: padding 0.3s ease;
   animation: fadeIn 1.5s ease-in;
 }
 
-
+.fade-out {
+  animation: fadeOut 1.5s ease-in;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -830,7 +962,15 @@ transition: padding 0.3s ease;
     opacity: 1;
   }
 }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
 
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes slideFromTop {
   0% {
     top: -500px;

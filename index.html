@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+   
     <!-- TOPBAR -->
     <header>
         <div id="topbar" class="slide-from-top fade-in">
@@ -24,12 +24,12 @@
                 <a href="index.html">Digital Solutions</a>
             </div>
             <div class="right-menu">
-                <span id="menu-btn">Menu</span>
+                <span id="menu-btn" data-responsive="normal">Menu</span>
                 <span id="change-theme">Light Theme</span>
             </div>
         </div>
     </header>
-
+    
     <!-- NAVBAR -->
     <nav id="navbar">
         <a href="#home">Home</a>
@@ -207,12 +207,31 @@
                 <div class="left-button">&lt;</div>
                 <div class="right-button">&gt;</div>
                 <div class="projects-container">
-                    <div class="item item-1" data-val="fata"></div>
-                    <div class="item item-2" data-val="dreapta"></div>
-                    <div class="item item-3" data-val="spate"></div>
-                    <div class="item item-4" data-val="stanga"></div>
+                    <div class="item item-1" data-val="fata">
+                        <img src="assets/test.PNG" alt="">
+                        <div class="see-project">
+                            <span>See Project</span>
+                        </div>
+                    </div>
+                    <div class="item item-2" data-val="dreapta">
+                        <img src="assets/test.PNG" alt="">
+                        <div class="see-project">
+                            <span>See Project</span>
+                        </div>
+                    </div>
+                    <div class="item item-3" data-val="spate">
+                        <div class="see-project">
+                            <span>See Project</span>
+                        </div>
+                    </div>
+                    <div class="item item-4" data-val="stanga">
+                        <div class="see-project">
+                            <span>See Project</span>
+                        </div>
+                    </div>
                 </div>
             </section>
+            
             <!-- NEWSLETTER -->
             <div id="newsletter">
                 <div class="newsletter-container">
@@ -295,7 +314,7 @@
                         <div class="form-title">
                             <h2>Contact</h2>
                         </div>
-                        <div>
+                        <div class="row">
                             <div class="first-name">
                                 <input type="text" placeholder="First Name">
                             </div>
@@ -303,7 +322,7 @@
                                 <input type="text" placeholder="Last Name">
                             </div>
                         </div>
-                        <div>
+                        <div class="row">
                             <div class="email">
                                 <input type="email" placeholder="Email">
                             </div>
@@ -331,7 +350,11 @@
 
         </div>
     </div>
-
+    <div class="modal">
+        <img src="assets/test.PNG" alt="">
+        <div class="close-btn"><span>Close Project</span> </div>
+    </div>
+   
     <script src="js/script.js"></script>
 
 </body>
