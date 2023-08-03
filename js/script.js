@@ -4,21 +4,6 @@ var container = document.querySelector('.container');
 var navbar = document.getElementById('navbar');
 var page = document.querySelector('.page');
 
-
-
-// TOPBAR - change theme
-var change_btn = document.getElementById('change-theme');
-var css_file = document.getElementById('css-file');
-change_btn.addEventListener('click', () => {
-  if (css_file.href.endsWith("dark-theme.css")) {
-    css_file.href = "css/light-theme.css";
-    change_btn.innerHTML = "Dark Theme";
-  } else {
-    css_file.href = "css/dark-theme.css";
-    change_btn.innerHTML = "Light Theme";
-  }
-});
-
 // NAVBAR - smooth scroll
 const links = document.querySelectorAll('#navbar a[href^="#"]');
 links.forEach(link => {
